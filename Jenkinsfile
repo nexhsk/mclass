@@ -23,5 +23,15 @@ pipeline {
                  checkout scm
             }
         }
+        stage('Maven Build'){
+            steps {
+                 sh 'mvn clean package -DskipTests'
+            }
+        }
+        stage('Prepare Jar'){
+            steps {
+                 sh 'cp target/demo-0.0.1-SNAPSHOT.jar ${JAR_FILE_NAME}'
+            }
+        }
     }
 }
