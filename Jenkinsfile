@@ -1,9 +1,9 @@
 pipeline {
     tools {
-        maven: "maven 3.9.12"
+        maven 'maven 3.9.12'
     }
 
-    stages{
+    stages {
         stage('Git CheckOut'){
             steps {
                  checkout scm
