@@ -16,7 +16,7 @@ pipeline {
         REMOTE_DIR = "/home/ec2-user/deploy"
         SSH_CREDENTIALS_ID = "f534a5fe-c36d-45a6-ae20-f1fee5634f61"
     }
-
+ 
     stages {
         stage('Git Checkout'){
             steps {
